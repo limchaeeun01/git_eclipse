@@ -38,6 +38,8 @@ public class LoginController implements Controller {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", responseUser);
 			
+			//request.setAttribute("loginUser", responseUser);
+			
 			view.setFlag(true);
 			view.setResponseJSP("./main.jsp");
 		}else {
@@ -45,7 +47,7 @@ public class LoginController implements Controller {
 			view.setResponseJSP("./error.jsp");
 		}
 		
-		return null;
+		return view;
 	}
 
 }

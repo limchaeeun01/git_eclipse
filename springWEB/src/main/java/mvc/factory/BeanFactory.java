@@ -6,6 +6,7 @@ import mvc.util.Controller;
 import mvc.ctrl.IndexController;
 import mvc.user.ctrl.ErrorController;
 import mvc.user.ctrl.JoinController;
+import mvc.user.ctrl.ListController;
 import mvc.user.ctrl.LoginController;
 
 public class BeanFactory {
@@ -17,8 +18,8 @@ public class BeanFactory {
 		map.put("/springWEB/index.kdt", new IndexController());
 		map.put("/springWEB/login.kdt", new LoginController());
 		map.put("/springWEB/joinForm.kdt", new JoinController());
-		map.put("./springWEB/error.kdt", new ErrorController());
-
+		map.put("/springWEB/error.kdt", new ErrorController());
+		map.put("/springWEB/list.kdt", new ListController());
 	}
 	
 	public static BeanFactory getInstance() {

@@ -7,6 +7,9 @@ public class UserDao {
 	
 	public UserResponseDTO loginRow(UserRequestDTO params) {
 		System.out.println("debug >>> user dao loginRow");
+		
+		//DB 연동
+		
 		UserResponseDTO response = new UserResponseDTO("lim", "lim", "채니");
 		
 		return response;
